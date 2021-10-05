@@ -39,6 +39,14 @@ namespace provCityCode1st.Data
                 ProvinceCode="BC",
                 ProvinceName="British Columbia",
             },
+            new Provinces() {
+                ProvinceCode="ON",
+                ProvinceName="Ontario",
+            },
+            new Provinces() {
+                ProvinceCode="PEI",
+                ProvinceName="Prince Edward Island",
+            },
 
         };
 
@@ -52,7 +60,16 @@ namespace provCityCode1st.Data
                 CityName="Surrey",
                 Population=10000000,
                 ProvinceCode = context.Provinces.Find("BC").ProvinceCode,
-
+            },
+            new City {
+                CityName="Toronto",
+                Population=10000000,
+                ProvinceCode = context.Provinces.Find("ON").ProvinceCode,
+            },
+            new City {
+                CityName="Charlottetown",
+                Population=10000000,
+                ProvinceCode = context.Provinces.Find("BC").ProvinceCode,
             },
         };
 
